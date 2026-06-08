@@ -37,7 +37,15 @@ src/
  ├── LoginForm.module.css    # Estilização escopada (CSS Modules)
  └── main.jsx                # Ponto de entrada do React
 
+---
 
+## 📸 Demonstração da Tela
+
+Aqui está o resultado final da tela de login clonada e estilizada:
+
+![Screenshot da Tela de Login](./screenshot.png)
+
+---
 
 
 
