@@ -41,7 +41,7 @@ src/
 
 ## 📸 Demonstração da Tela
 
-<img width="544" height="592" alt="screenshot" src="https://github.com/user-attachments/assets/310e5487-7908-4d12-9f4e-d6c626c660c2" />
+![Screenshot da Tela de Login](./src/assets/screenshot.png)
 
 
 
