@@ -43,7 +43,7 @@ src/
 
 Aqui está o resultado final da tela de login clonada e estilizada:
 
-![Screenshot da Tela de Login](./screenshot.png)
+![Screenshot da Tela de Login](./src/assets/screenshot.png)
 
 ---
 
