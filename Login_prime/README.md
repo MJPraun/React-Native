@@ -41,12 +41,7 @@ src/
 
 ## 📸 Demonstração da Tela
 
-Aqui está o resultado final da tela de login clonada e estilizada:
-
-![Screenshot da Tela de Login](Login_prime/src/assets/screenshot.png)
-
----
-
+<img width="544" height="592" alt="screenshot" src="https://github.com/user-attachments/assets/310e5487-7908-4d12-9f4e-d6c626c660c2" />
 
 
 
