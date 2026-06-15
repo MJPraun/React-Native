@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native';
 
-export const styles = StyleSheet.create({
+export const styles = StyleSheet.create({ //Exigencia do trabalho
   container: {
     flex: 1,
-    backgroundColor: '#0b141a', // Fundo escuro oficial do WhatsApp
+    backgroundColor: '#0b141a', 
     paddingTop: 50,
   },
   header: {
@@ -25,14 +25,14 @@ export const styles = StyleSheet.create({
   iconImage: {
     width: 24,
     height: 24,
-    tintColor: '#ffffff', // Deixa os ícones brancos
+    tintColor: '#ffffff',
   },
   searchContainer: {
     paddingHorizontal: 16,
     marginVertical: 12,
   },
   searchInput: {
-    backgroundColor: '#202c33', // Fundo cinza do input do WhatsApp
+    backgroundColor: '#202c33',
     color: '#ffffff',
     borderRadius: 24,
     paddingHorizontal: 18,
@@ -46,13 +46,13 @@ export const styles = StyleSheet.create({
     marginBottom: 15,
   },
   filterBadgeActive: {
-    backgroundColor: '#0c3e2e', // Verde escuro para o filtro "Todas" ativo
+    backgroundColor: '#0c3e2e',
     paddingHorizontal: 16,
     paddingVertical: 6,
     borderRadius: 20,
   },
   filterTextActive: {
-    color: '#25d366', // Texto verde claro
+    color: '#25d366',
     fontWeight: '600',
     fontSize: 14,
   },
@@ -78,7 +78,7 @@ export const styles = StyleSheet.create({
   avatar: {
     width: 52,
     height: 52,
-    borderRadius: 26, // Deixa a foto redonda
+    borderRadius: 26, 
     marginRight: 14,
   },
   chatContent: {

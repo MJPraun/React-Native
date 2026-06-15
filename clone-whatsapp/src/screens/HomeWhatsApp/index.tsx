@@ -1,11 +1,10 @@
 import React from 'react';
-import { View, Text, TextInput, ScrollView, Image } from 'react-native'; 
-import { Ionicons, MaterialIcons } from '@expo/vector-icons'; // Importação das bibliotecas de ícones nativos
+import { View, Text, TextInput, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { Ionicons, MaterialIcons } from '@expo/vector-icons'; 
 import { styles } from './styles';
 
 export function HomeWhatsApp() {
-  
-  // 1. Sua lista apontando para os arquivos locais com os tipos configurados para os ícones
+ 
   const conversas = [
     { id: '1', nome: 'Mario Praun (Você)', msg: 'Foto', tempo: '13:57', img: require('../../../assets/mario.png'), tipo: 'foto' },
     { id: '2', nome: '❤️ Amorzinho ❤️', msg: 'Vou ver se eles tem cabo para cá', tempo: '13:39', img: require('../../../assets/jess.png'), tipo: 'texto_enviado' },
@@ -15,11 +14,10 @@ export function HomeWhatsApp() {
   ];
 
   return (
-    <View style={styles.container}>
-      
-      {/* Cabeçalho com os ícones oficiais do topo */}
+    <View style={styles.container}> /* Requisito obrigatorio: View */
+
       <View style={styles.header}>
-        <Text style={styles.headerText}>WhatsApp</Text>
+        <Text style={styles.headerText}>WhatsApp</Text> {/* Requisito obrigatorio: Text */}
         <View style={styles.headerIcons}>
           <MaterialIcons name="photo-camera" size={22} color="#ffffff" />
           <Ionicons name="search-outline" size={22} color="#ffffff" />
@@ -27,7 +25,6 @@ export function HomeWhatsApp() {
         </View>
       </View>
 
-      {/* Requisito Obrigatório: TextInput */}
       <View style={styles.searchContainer}>
         <TextInput 
           style={styles.searchInput}
@@ -36,7 +33,6 @@ export function HomeWhatsApp() {
         />
       </View>
 
-      {/* Filtros */}
       <View style={styles.filterContainer}>
         <View style={styles.filterBadgeActive}>
           <Text style={styles.filterTextActive}>Todas</Text>
@@ -46,12 +42,12 @@ export function HomeWhatsApp() {
         </View>
       </View>
 
-      {/* 2. Lista exibindo as Imagens Locais e Ícones das conversas */}
-      <ScrollView style={styles.chatList}>
+      <ScrollView style={styles.chatList} showsVerticalScrollIndicator={false}>
         {conversas.map((item) => (
-          <View key={item.id} style={styles.chatRow}>
+
+          <TouchableOpacity key={item.id} style={styles.chatRow} activeOpacity={0.7}>
             
-            <Image source={item.img} style={styles.avatar} />
+            <Image source={item.img} style={styles.avatar} /> {/* Requisito obrigatorio: Image */}
             
             <View style={styles.chatContent}>
               <View style={styles.chatHeader}>
@@ -59,39 +55,33 @@ export function HomeWhatsApp() {
                 <Text style={styles.chatTime}>{item.tempo}</Text>
               </View>
 
-              {/* Linha da mensagem ajustada para renderizar os microfones e checks */}
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
-                
-                {/* Se for a sua foto: coloca a câmera cinza antes do texto */}
+              
                 {item.tipo === 'foto' && (
                   <MaterialIcons name="photo-camera" size={15} color="#8696a0" />
                 )}
 
-                {/* Se for mensagem do Amorzinho: coloca o check duplo azul de lido */}
                 {item.tipo === 'texto_enviado' && (
                   <Ionicons name="checkmark-done" size={16} color="#53bdeb" />
                 )}
 
-                {/* Se for o grupo: coloca o check duplo cinza de enviado */}
                 {item.tipo === 'grupo' && (
                   <Ionicons name="checkmark-done" size={16} color="#8696a0" />
                 )}
-
-                {/* Se for o Rafael: coloca o microfone verde oficial de áudio */}
+*/
                 {item.tipo === 'audio' && (
                   <MaterialIcons name="mic" size={16} color="#1fa855" />
                 )}
 
                 <Text style={styles.chatMessage} numberOfLines={1}>{item.msg}</Text>
 
-                {/* Check duplo no final da linha da sua foto para bater com o layout */}
                 {item.tipo === 'foto' && (
                   <Ionicons name="checkmark-done" size={16} color="#53bdeb" style={{ marginLeft: 'auto' }} />
                 )}
               </View>
 
             </View>
-          </View>
+          </TouchableOpacity>
         ))}
       </ScrollView>
 

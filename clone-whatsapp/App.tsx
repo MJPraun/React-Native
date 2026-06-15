@@ -1,7 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { View } from 'react-native';
-import { HomeWhatsApp } from './src/screens/HomeWhatsApp/index'; // Adicionamos o /index explicitamente
+import { HomeWhatsApp } from './src/screens/HomeWhatsApp/index';
 
 export default function App() {
   return (
